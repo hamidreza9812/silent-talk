@@ -1,16 +1,2 @@
 == render/reel_w1_r3.py
-Traceback (most recent call last):
-  File "/home/runner/work/silent-talk/silent-talk/render/reel_w1_r3.py", line 26, in <module>
-    if __name__ == "__main__": R.main(SPEC)
-                               ^^^^^^^^^^^^
-  File "/home/runner/work/silent-talk/silent-talk/render/reel_engine.py", line 214, in main
-    else: print(run(spec))
-                ^^^^^^^^^
-  File "/home/runner/work/silent-talk/silent-talk/render/reel_engine.py", line 158, in run
-    ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1026, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/subprocess.py", line 1955, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+/home/runner/work/silent-talk/silent-talk/content/week1/reel-3/reel-3-payan.mp4
