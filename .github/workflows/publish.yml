@@ -12,10 +12,6 @@ on:
         description: "شناسهٔ موردها با ویرگول (مثلاً w1-reel1,w1-postA) یا all برای همهٔ پیش‌نویس‌ها"
         required: false
         default: ""
-  push:
-    paths: ["queue/queue.json"]
-  schedule:
-    - cron: "17 * * * *"
 
 concurrency:
   group: silent-talk-queue
