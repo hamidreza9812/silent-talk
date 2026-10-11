@@ -38,16 +38,21 @@ jobs:
         env:
           PYTHONPATH: render
         run: |
-          for f in ${{ steps.list.outputs.files }}; do
-            echo "== $f"
-            case "$(basename "$f")" in
-              reel*) python3 "$f" texts && python3 "$f" ;;
-              *)     python3 "$f" ;;
-            esac
-          done
+          set -o pipefail
+          mkdir -p logs
+          {
+            for f in ${{ steps.list.outputs.files }}; do
+              echo "== $f"
+              case "$(basename "$f")" in
+                reel*) python3 "$f" texts && python3 "$f" ;;
+                *)     python3 "$f" ;;
+              esac
+            done
+          } 2>&1 | tee logs/last-render.log
       - name: ثبت خروجی‌ها
+        if: always()
         run: |
           git config user.name "silent-talk-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add content
+          git add content logs
           git diff --cached --quiet || (git commit -m "content: ساخت خودکار" && git pull --rebase && git push)
