@@ -170,6 +170,145 @@
       "status": "scheduled",
       "handled_by": "browser",
       "via": "browser"
+    },
+    {
+      "id": "w2-reel1",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۱: پاهای مینا به سمت در بود",
+      "media": [
+        "content/week2/reel-1/reel-1-pa.mp4"
+      ],
+      "caption_file": "content/week2/reel-1/caption.txt",
+      "publish_at": "2026-10-19T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-postA",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست الف: پاهایش به سمت در است",
+      "media": [
+        "content/week2/post-a-feet/1.png",
+        "content/week2/post-a-feet/2.png",
+        "content/week2/post-a-feet/3.png",
+        "content/week2/post-a-feet/4.png",
+        "content/week2/post-a-feet/5.png"
+      ],
+      "caption_file": "content/week2/post-a-feet/caption.txt",
+      "publish_at": "2026-10-19T18:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-reel2",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۲: مینا چه جوابی داد؟",
+      "media": [
+        "content/week2/reel-2/reel-2-javab.mp4"
+      ],
+      "caption_file": "content/week2/reel-2/caption.txt",
+      "publish_at": "2026-10-20T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-postB",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ب: خمیازه کشید",
+      "media": [
+        "content/week2/post-b-yawn/1.png",
+        "content/week2/post-b-yawn/2.png",
+        "content/week2/post-b-yawn/3.png",
+        "content/week2/post-b-yawn/4.png",
+        "content/week2/post-b-yawn/5.png"
+      ],
+      "caption_file": "content/week2/post-b-yawn/caption.txt",
+      "publish_at": "2026-10-21T18:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-reel3",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۳: علی خمیازه کشید",
+      "media": [
+        "content/week2/reel-3/reel-3-khamyaze.mp4"
+      ],
+      "caption_file": "content/week2/reel-3/caption.txt",
+      "publish_at": "2026-10-22T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-postC",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ج: علی پرسید، مینا خندید",
+      "media": [
+        "content/week2/post-c-ask/1.png",
+        "content/week2/post-c-ask/2.png",
+        "content/week2/post-c-ask/3.png",
+        "content/week2/post-c-ask/4.png",
+        "content/week2/post-c-ask/5.png"
+      ],
+      "caption_file": "content/week2/post-c-ask/caption.txt",
+      "publish_at": "2026-10-23T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-postD",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست د: لبخند می‌زند، ولی پاهایش می‌رود",
+      "media": [
+        "content/week2/post-d-mixed/1.png",
+        "content/week2/post-d-mixed/2.png",
+        "content/week2/post-d-mixed/3.png",
+        "content/week2/post-d-mixed/4.png",
+        "content/week2/post-d-mixed/5.png"
+      ],
+      "caption_file": "content/week2/post-d-mixed/caption.txt",
+      "publish_at": "2026-10-24T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w2-li07",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li07: بدن پیش از حرف‌ها می‌رود",
+      "media": [
+        "content/week2/linkedin/li07-feet.png"
+      ],
+      "caption_file": "content/week2/linkedin/li07-feet.txt",
+      "publish_at": "2026-10-20T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
+    },
+    {
+      "id": "w2-li08",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li08: خمیازه، یعنی بی‌حوصلگی؟",
+      "media": [
+        "content/week2/linkedin/li08-yawn.png"
+      ],
+      "caption_file": "content/week2/linkedin/li08-yawn.txt",
+      "publish_at": "2026-10-22T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
+    },
+    {
+      "id": "w2-li09",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li09: قبل از نتیجه‌گیری، موقعیت را ببین",
+      "media": [
+        "content/week2/linkedin/li09-story.png"
+      ],
+      "caption_file": "content/week2/linkedin/li09-story.txt",
+      "publish_at": "2026-10-24T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
     }
   ]
 }
