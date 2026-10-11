@@ -11,7 +11,11 @@
       ],
       "caption_file": "content/week1/reel-1/caption.txt",
       "publish_at": "2026-10-12T10:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467783
+      }
     },
     {
       "id": "w1-postA",
@@ -27,7 +31,11 @@
       ],
       "caption_file": "content/week1/post-a-throat/caption.txt",
       "publish_at": "2026-10-12T18:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467811
+      }
     },
     {
       "id": "w1-reel2",
@@ -39,7 +47,11 @@
       ],
       "caption_file": "content/week1/reel-2/caption.txt",
       "publish_at": "2026-10-13T10:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467849
+      }
     },
     {
       "id": "w1-postB",
@@ -55,7 +67,11 @@
       ],
       "caption_file": "content/week1/post-b-blink/caption.txt",
       "publish_at": "2026-10-14T18:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467886
+      }
     },
     {
       "id": "w1-reel3",
@@ -67,7 +83,11 @@
       ],
       "caption_file": "content/week1/reel-3/caption.txt",
       "publish_at": "2026-10-15T10:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467935
+      }
     },
     {
       "id": "w1-postC",
@@ -83,7 +103,11 @@
       ],
       "caption_file": "content/week1/post-c-ask/caption.txt",
       "publish_at": "2026-10-16T10:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393467967
+      }
     },
     {
       "id": "w1-postD",
@@ -99,7 +123,11 @@
       ],
       "caption_file": "content/week1/post-d-behind/caption.txt",
       "publish_at": "2026-10-17T10:00:00",
-      "status": "draft"
+      "status": "scheduled",
+      "via": "connector",
+      "metricool": {
+        "id": 393468005
+      }
     },
     {
       "id": "w1-li04",
