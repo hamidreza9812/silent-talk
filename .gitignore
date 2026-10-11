@@ -1,0 +1,7 @@
+__pycache__/
+node_modules/
+content/**/t[0-9]*.png
+content/**/end.png
+content/**/music.wav
+content/**/silent.mp4
+.DS_Store

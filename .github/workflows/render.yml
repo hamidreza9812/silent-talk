@@ -1,0 +1,53 @@
+name: ساخت ریل و پست
+
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: "اسکریپت ساخت، مثلاً render/reel_w1_r1.py"
+        required: true
+  push:
+    paths: ["render/jobs/**.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: نصب ابزارها
+        run: |
+          pip install numpy pillow playwright
+          python -m playwright install --with-deps chromium
+          ffmpeg -version | head -1
+      - name: فهرست اسکریپت‌ها
+        id: list
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "files=${{ inputs.script }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "files=$(git diff --name-only HEAD~1 HEAD -- 'render/jobs/*.py' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+      - name: ساخت
+        env:
+          PYTHONPATH: render
+        run: |
+          for f in ${{ steps.list.outputs.files }}; do
+            echo "== $f"
+            case "$(basename "$f")" in
+              reel*) python3 "$f" texts && python3 "$f" ;;
+              *)     python3 "$f" ;;
+            esac
+          done
+      - name: ثبت خروجی‌ها
+        run: |
+          git config user.name "silent-talk-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content
+          git diff --cached --quiet || (git commit -m "content: ساخت خودکار" && git pull --rebase && git push)

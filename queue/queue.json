@@ -1,0 +1,144 @@
+{
+  "timezone": "Asia/Tehran",
+  "items": [
+    {
+      "id": "w1-reel1",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۱: علی سه بار گلویش را صاف کرد",
+      "media": [
+        "content/week1/reel-1/reel-1-gelu.mp4"
+      ],
+      "caption_file": "content/week1/reel-1/caption.txt",
+      "publish_at": "2026-10-12T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-postA",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست الف: گلویش را صاف کرد",
+      "media": [
+        "content/week1/post-a-throat/1.png",
+        "content/week1/post-a-throat/2.png",
+        "content/week1/post-a-throat/3.png",
+        "content/week1/post-a-throat/4.png",
+        "content/week1/post-a-throat/5.png"
+      ],
+      "caption_file": "content/week1/post-a-throat/caption.txt",
+      "publish_at": "2026-10-12T18:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-reel2",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۲: مینا قضاوت نکرد؛ پرسید",
+      "media": [
+        "content/week1/reel-2/reel-2-porside.mp4"
+      ],
+      "caption_file": "content/week1/reel-2/caption.txt",
+      "publish_at": "2026-10-13T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-postB",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ب: زیاد پلک می‌زند",
+      "media": [
+        "content/week1/post-b-blink/1.png",
+        "content/week1/post-b-blink/2.png",
+        "content/week1/post-b-blink/3.png",
+        "content/week1/post-b-blink/4.png",
+        "content/week1/post-b-blink/5.png"
+      ],
+      "caption_file": "content/week1/post-b-blink/caption.txt",
+      "publish_at": "2026-10-14T18:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-reel3",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۳: علی استخدام شد؟",
+      "media": [
+        "content/week1/reel-3/reel-3-payan.mp4"
+      ],
+      "caption_file": "content/week1/reel-3/caption.txt",
+      "publish_at": "2026-10-15T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-postC",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ج: مینا همه‌چیز را دید",
+      "media": [
+        "content/week1/post-c-ask/1.png",
+        "content/week1/post-c-ask/2.png",
+        "content/week1/post-c-ask/3.png",
+        "content/week1/post-c-ask/4.png",
+        "content/week1/post-c-ask/5.png"
+      ],
+      "caption_file": "content/week1/post-c-ask/caption.txt",
+      "publish_at": "2026-10-16T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-postD",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست د: چرا با مینا و علی درس می‌دهم؟",
+      "media": [
+        "content/week1/post-d-behind/1.png",
+        "content/week1/post-d-behind/2.png",
+        "content/week1/post-d-behind/3.png",
+        "content/week1/post-d-behind/4.png",
+        "content/week1/post-d-behind/5.png"
+      ],
+      "caption_file": "content/week1/post-d-behind/caption.txt",
+      "publish_at": "2026-10-17T10:00:00",
+      "status": "draft"
+    },
+    {
+      "id": "w1-li04",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li04: یک بار گلو صاف کردن، یک حکم نیست",
+      "media": [
+        "content/week1/linkedin/li04-throat.png"
+      ],
+      "caption_file": "content/week1/linkedin/li04-throat.txt",
+      "publish_at": "2026-10-12T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
+    },
+    {
+      "id": "w1-li05",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li05: قبل از قضاوت، یک سؤال باز بپرسید",
+      "media": [
+        "content/week1/linkedin/li05-question.png"
+      ],
+      "caption_file": "content/week1/linkedin/li05-question.txt",
+      "publish_at": "2026-10-14T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
+    },
+    {
+      "id": "w1-li06",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li06: مصاحبه‌گر خوب، اول می‌پرسد",
+      "media": [
+        "content/week1/linkedin/li06-story.png"
+      ],
+      "caption_file": "content/week1/linkedin/li06-story.txt",
+      "publish_at": "2026-10-16T09:00:00",
+      "status": "draft",
+      "handled_by": "browser"
+    }
+  ]
+}
