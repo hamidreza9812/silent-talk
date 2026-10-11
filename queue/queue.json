@@ -340,6 +340,155 @@
       "status": "scheduled",
       "handled_by": "browser",
       "via": "browser"
+    },
+    {
+      "id": "w3-reel1",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۱: مینا چشم‌هایش را بالا برد",
+      "media": [
+        "content/week3/reel-1/reel-1-chashm.mp4"
+      ],
+      "caption_file": "content/week3/reel-1/caption.txt",
+      "publish_at": "2026-10-26T10:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-postA",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست الف: چشم‌هایش را بالا برد",
+      "media": [
+        "content/week3/post-a-eyes/1.png",
+        "content/week3/post-a-eyes/2.png",
+        "content/week3/post-a-eyes/3.png",
+        "content/week3/post-a-eyes/4.png",
+        "content/week3/post-a-eyes/5.png"
+      ],
+      "caption_file": "content/week3/post-a-eyes/caption.txt",
+      "publish_at": "2026-10-26T18:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-reel2",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۲: علی پرسید",
+      "media": [
+        "content/week3/reel-2/reel-2-porsid.mp4"
+      ],
+      "caption_file": "content/week3/reel-2/caption.txt",
+      "publish_at": "2026-10-27T10:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-postB",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ب: لبخند زد، پس راضی است؟",
+      "media": [
+        "content/week3/post-b-smile/1.png",
+        "content/week3/post-b-smile/2.png",
+        "content/week3/post-b-smile/3.png",
+        "content/week3/post-b-smile/4.png",
+        "content/week3/post-b-smile/5.png"
+      ],
+      "caption_file": "content/week3/post-b-smile/caption.txt",
+      "publish_at": "2026-10-28T18:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-reel3",
+      "network": "instagram",
+      "type": "reel",
+      "title": "ریل ۳: لبخند علی مؤدبانه بود",
+      "media": [
+        "content/week3/reel-3/reel-3-labkhand.mp4"
+      ],
+      "caption_file": "content/week3/reel-3/caption.txt",
+      "publish_at": "2026-10-29T10:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-postC",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست ج: علی ارائه داد، مینا نگاهش را بالا برد",
+      "media": [
+        "content/week3/post-c-ask/1.png",
+        "content/week3/post-c-ask/2.png",
+        "content/week3/post-c-ask/3.png",
+        "content/week3/post-c-ask/4.png",
+        "content/week3/post-c-ask/5.png"
+      ],
+      "caption_file": "content/week3/post-c-ask/caption.txt",
+      "publish_at": "2026-10-30T10:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-postD",
+      "network": "instagram",
+      "type": "carousel",
+      "title": "پست د: چشم‌غره، لبخند، نیم‌نگاه",
+      "media": [
+        "content/week3/post-d-recap/1.png",
+        "content/week3/post-d-recap/2.png",
+        "content/week3/post-d-recap/3.png",
+        "content/week3/post-d-recap/4.png",
+        "content/week3/post-d-recap/5.png"
+      ],
+      "caption_file": "content/week3/post-d-recap/caption.txt",
+      "publish_at": "2026-10-31T10:00:00",
+      "status": "draft",
+      "via": "connector"
+    },
+    {
+      "id": "w3-li10",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li10: نگاهِ بالا، یعنی بی‌اعتمادی؟",
+      "media": [
+        "content/week3/linkedin/li10-eyes.png"
+      ],
+      "caption_file": "content/week3/linkedin/li10-eyes.txt",
+      "publish_at": "2026-10-27T09:00:00",
+      "status": "draft",
+      "handled_by": "browser",
+      "via": "browser"
+    },
+    {
+      "id": "w3-li11",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li11: لبخند مؤدبانه، یعنی موافقت؟",
+      "media": [
+        "content/week3/linkedin/li11-smile.png"
+      ],
+      "caption_file": "content/week3/linkedin/li11-smile.txt",
+      "publish_at": "2026-10-29T09:00:00",
+      "status": "draft",
+      "handled_by": "browser",
+      "via": "browser"
+    },
+    {
+      "id": "w3-li12",
+      "network": "linkedin",
+      "type": "post",
+      "title": "li12: به‌جای حدس زدن، بپرسید",
+      "media": [
+        "content/week3/linkedin/li12-story.png"
+      ],
+      "caption_file": "content/week3/linkedin/li12-story.txt",
+      "publish_at": "2026-10-31T09:00:00",
+      "status": "draft",
+      "handled_by": "browser",
+      "via": "browser"
     }
   ]
 }
