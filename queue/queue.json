@@ -139,8 +139,9 @@
       ],
       "caption_file": "content/week1/linkedin/li04-throat.txt",
       "publish_at": "2026-10-12T09:00:00",
-      "status": "draft",
-      "handled_by": "browser"
+      "status": "scheduled",
+      "handled_by": "browser",
+      "via": "browser"
     },
     {
       "id": "w1-li05",
@@ -152,8 +153,9 @@
       ],
       "caption_file": "content/week1/linkedin/li05-question.txt",
       "publish_at": "2026-10-14T09:00:00",
-      "status": "draft",
-      "handled_by": "browser"
+      "status": "scheduled",
+      "handled_by": "browser",
+      "via": "browser"
     },
     {
       "id": "w1-li06",
@@ -165,8 +167,9 @@
       ],
       "caption_file": "content/week1/linkedin/li06-story.txt",
       "publish_at": "2026-10-16T09:00:00",
-      "status": "draft",
-      "handled_by": "browser"
+      "status": "scheduled",
+      "handled_by": "browser",
+      "via": "browser"
     }
   ]
 }
