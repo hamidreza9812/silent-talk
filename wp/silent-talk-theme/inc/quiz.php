@@ -2,7 +2,8 @@
 /** Quiz: data, /quiz/ route, anonymous funnel counters. */
 if (!defined('ABSPATH')) { exit; }
 
-function st_quiz_data() {
+function st_quiz_data($set = 'basic') {
+    if ($set === 'pro') { return st_quiz_pro_data(); }
     $img = get_template_directory_uri() . '/assets/img/';
     $q = [
         ['img' => 'quiz-1.jpg', 'alt' => 'سارا با لب‌های به‌هم‌فشرده و نگاه پایین',
@@ -73,15 +74,22 @@ function st_quiz_data() {
 }
 
 add_action('init', function () {
+    add_rewrite_rule('^quiz/pro/?$', 'index.php?st_quiz=2', 'top');
     add_rewrite_rule('^quiz/?$', 'index.php?st_quiz=1', 'top');
 });
+
+/** Which quiz set the current request shows: 'pro' for /quiz/pro/, otherwise 'basic'. */
+function st_quiz_set() { return (string) get_query_var('st_quiz') === '2' ? 'pro' : 'basic'; }
+/** Every level of every quiz set (used to validate stored results). */
+function st_quiz_levels() { return st_quiz_data('basic')['levels'] + st_quiz_data('pro')['levels']; }
 add_filter('query_vars', function ($v) { $v[] = 'st_quiz'; return $v; });
 add_filter('template_include', function ($t) {
-    if (get_query_var('st_quiz')) { return get_template_directory() . '/quiz.php'; }
+    if (get_query_var('st_quiz')) { nocache_headers(); return get_template_directory() . '/quiz.php'; }
     return $t;
 });
 add_filter('pre_get_document_title', function ($t) {
-    return get_query_var('st_quiz') ? 'آزمون: سطح درک زبان بدنت چقدره؟ | گفتگوهای خاموش' : $t;
+    if (!get_query_var('st_quiz')) { return $t; }
+    return st_quiz_set() === 'pro' ? 'آزمون پیشرفته: خوشه‌ها، زمینه و پرسش | گفتگوهای خاموش' : 'آزمون: سطح درک زبان بدنت چقدره؟ | گفتگوهای خاموش';
 });
 add_action('after_switch_theme', function () { flush_rewrite_rules(); });
 add_action('init', function () {
@@ -100,7 +108,7 @@ function st_quiz_event() {
     set_transient($key, $n + 1, HOUR_IN_SECONDS);
     $ev = isset($_POST['ev']) ? sanitize_key($_POST['ev']) : '';
     $lv = isset($_POST['level']) ? sanitize_key($_POST['level']) : '';
-    $levels = array_keys(st_quiz_data()['levels']);
+    $levels = array_keys(st_quiz_levels());
     $c = get_option('st_quiz_counts', ['start' => 0, 'done' => 0, 'levels' => []]);
     if ($ev === 'start') { $c['start']++; }
     elseif ($ev === 'done' && in_array($lv, $levels, true)) { $c['done']++; $c['levels'][$lv] = (isset($c['levels'][$lv]) ? $c['levels'][$lv] : 0) + 1; }
@@ -110,6 +118,7 @@ function st_quiz_event() {
 }
 
 /** Quiz URL that also works when pretty permalinks are off. */
-function st_quiz_url() {
+function st_quiz_url($set = 'basic') {
+    if ($set === 'pro') { return get_option('permalink_structure') ? home_url('/quiz/pro/') : home_url('/?st_quiz=2'); }
     return get_option('permalink_structure') ? home_url('/quiz/') : home_url('/?st_quiz=1');
 }

@@ -4,8 +4,9 @@
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('ST_VER', '1.2.0');
+define('ST_VER', '1.3.0');
 require_once get_template_directory() . '/inc/quiz.php';
+require_once get_template_directory() . '/inc/quiz-pro.php';
 require_once get_template_directory() . '/inc/learn.php';
 
 /* ---------- setup ---------- */
@@ -26,7 +27,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('silent-talk', get_template_directory_uri() . '/assets/js/main.js', [], filemtime($dir . '/assets/js/main.js'), ['in_footer' => true, 'strategy' => 'defer']);
     $st = ['ajax' => admin_url('admin-ajax.php'), 'learnUrl' => st_learn_url(), 'user' => is_user_logged_in()];
     if (is_user_logged_in()) { $st['nonce'] = wp_create_nonce('st_learn'); }
-    if (get_query_var('st_quiz')) { $st['quiz'] = st_quiz_data(); $st['quizUrl'] = st_quiz_url(); }
+    if (get_query_var('st_quiz')) { $st['quiz'] = st_quiz_data(st_quiz_set()); $st['quizUrl'] = st_quiz_url(st_quiz_set()); }
     wp_localize_script('silent-talk', 'ST', $st);
 });
 
@@ -97,7 +98,7 @@ add_action('manage_st_lead_posts_custom_column', function ($col, $id) {
     if ($col === 'st_contact') { echo esc_html(get_post_meta($id, 'contact', true)); }
     if ($col === 'st_interest') { echo esc_html(st_interest_label(get_post_meta($id, 'interest', true))); }
     if ($col === 'st_quiz') {
-        $lv = get_post_meta($id, 'quiz_level', true); $d = st_quiz_data()['levels'];
+        $lv = get_post_meta($id, 'quiz_level', true); $d = st_quiz_levels();
         echo $lv && isset($d[$lv]) ? esc_html($d[$lv]['title'] . ' (' . get_post_meta($id, 'quiz_score', true) . ')') : '';
     }
     if ($col === 'st_source') {
@@ -156,9 +157,9 @@ function st_submit_lead() {
     if ($contact === '') { st_fail('ایمیل یا شمارهٔ موبایل معتبر بنویس (مثل ۰۹۱۲۱۲۳۴۵۶۷).'); }
     if (empty($_POST['consent'])) { st_fail('برای ادامه، تیک موافقت رو بزن.'); }
 
-    $qs = isset($_POST['quiz_score']) ? max(0, min(16, (int) $_POST['quiz_score'])) : -1;
+    $qs = isset($_POST['quiz_score']) ? max(0, min(20, (int) $_POST['quiz_score'])) : -1;
     $ql = isset($_POST['quiz_level']) ? sanitize_key($_POST['quiz_level']) : '';
-    if (!in_array($ql, array_keys(st_quiz_data()['levels']), true)) { $ql = ''; $qs = -1; }
+    if (!in_array($ql, array_keys(st_quiz_levels()), true)) { $ql = ''; $qs = -1; }
     $existing = get_posts(['post_type' => 'st_lead', 'post_status' => 'any', 'numberposts' => 1, 'fields' => 'ids',
         'meta_key' => 'contact', 'meta_value' => $contact]);
     $magnet = esc_url_raw(st_opt('st_magnet_url'));

@@ -73,12 +73,12 @@ function st_guard_user() {
 }
 function st_clean_level($l) {
     $l = sanitize_key($l);
-    return in_array($l, array_keys(st_quiz_data()['levels']), true) ? $l : '';
+    return in_array($l, array_keys(st_quiz_levels()), true) ? $l : '';
 }
 function st_store_quiz($uid, $score, $level) {
     $level = st_clean_level($level);
     if ($level === '') { return; }
-    $score = max(0, min(16, (int) $score));
+    $score = max(0, min(20, (int) $score));
     update_user_meta($uid, 'st_quiz_last', ['score' => $score, 'level' => $level, 'at' => gmdate('c')]);
     $h = get_user_meta($uid, 'st_quiz_hist', true); $h = is_array($h) ? $h : [];
     $h[] = ['score' => $score, 'level' => $level, 'at' => gmdate('c')];
@@ -182,7 +182,7 @@ add_filter('manage_users_columns', function ($c) { $c['st_learn'] = 'یادگی�
 add_filter('manage_users_custom_column', function ($out, $col, $uid) {
     if ($col !== 'st_learn') { return $out; }
     $q = get_user_meta($uid, 'st_quiz_last', true);
-    $lv = is_array($q) && isset(st_quiz_data()['levels'][$q['level']]) ? st_quiz_data()['levels'][$q['level']]['title'] . ' (' . (int) $q['score'] . ')' : '—';
+    $lv = is_array($q) && isset(st_quiz_levels()[$q['level']]) ? st_quiz_levels()[$q['level']]['title'] . ' (' . (int) $q['score'] . ')' : '—';
     $d = count(st_progress($uid));
     $b = st_has_book($uid) ? '✅ کتاب' : (get_user_meta($uid, 'st_book_claim', true) ? '⏳ درخواست کتاب' : '');
     $html = esc_html($lv . ' · ' . $d . '/' . count(st_course_data()) . ' ' . $b);

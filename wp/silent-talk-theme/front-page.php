@@ -69,7 +69,7 @@ $book = st_opt('st_book_url');
     <h2>مسیر یادگیری، <b>پله‌پله</b></h2>
     <p class="sec-sub">از یه آزمون کوچیک شروع کن؛ هر وقت آماده بودی، بالاتر برو.</p>
     <div class="grid g4">
-      <div class="card rv"><span class="tag">آماده</span><h3>آزمون سطح‌سنج</h3><p>۸ موقعیت واقعی، ۲ دقیقه. می‌فهمی الان کجایی و قدم بعدی چیه.</p><a class="btn sm" href="<?php echo esc_url(st_quiz_url()); ?>">شروع آزمون</a></div>
+      <div class="card rv"><span class="tag">آماده</span><h3>آزمون سطح‌سنج</h3><p>۸ موقعیت واقعی، ۲ دقیقه. می‌فهمی الان کجایی و قدم بعدی چیه.</p><a class="btn sm" href="<?php echo esc_url(st_quiz_url()); ?>">شروع آزمون</a> <a class="btn sm ghost" href="<?php echo esc_url(st_quiz_url('pro')); ?>">نسخهٔ پیشرفته</a></div>
       <div class="card rv"><span class="tag">آماده</span><h3>داستان‌های تصویری</h3><p>داستون‌های کوتاه با سه تا سرنخ و یه درس؛ هر هفته توی پیج.</p><?php if (st_opt('st_instagram')) : ?><a class="btn sm" href="<?php echo esc_url(st_opt('st_instagram')); ?>" rel="noopener" target="_blank">ببین توی اینستاگرام</a><?php else : ?><a class="btn sm ghost" href="#join">خبرم کن</a><?php endif; ?></div>
       <div class="card rv"><span class="tag">آماده</span><h3>دورهٔ ۸ درسی</h3><p>درس‌های کوتاه با تمرین و سؤال، با پروفایل یادگیری. فعلاً رایگان.</p><a class="btn sm" href="<?php echo esc_url(st_learn_url()); ?>">ورود به دوره</a></div>
       <div class="card rv"><span class="tag">به‌زودی</span><h3>کارگاه زندهٔ آنلاین</h3><p>تمرین گروهی روی موقعیت‌های واقعی؛ برای تیم‌ها و شرکت‌ها هم برگزار می‌شه.</p><a class="btn sm ghost" href="#join">اطلاع‌رسانی</a></div>
