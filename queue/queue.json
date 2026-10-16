@@ -676,6 +676,66 @@
    "metricool": {
     "id": 397885849
    }
+  },
+  {
+   "id": "launch-site-story-1",
+   "network": "instagram",
+   "type": "story",
+   "title": "استوری معرفی سایت (1/4)",
+   "media": [
+    "content/launch/site-story/1.png"
+   ],
+   "publish_at": "2026-10-16T21:00:00",
+   "status": "scheduled",
+   "via": "connector",
+   "metricool": {
+    "id": 397888885
+   }
+  },
+  {
+   "id": "launch-site-story-2",
+   "network": "instagram",
+   "type": "story",
+   "title": "استوری معرفی سایت (2/4)",
+   "media": [
+    "content/launch/site-story/2.png"
+   ],
+   "publish_at": "2026-10-16T21:02:00",
+   "status": "scheduled",
+   "via": "connector",
+   "metricool": {
+    "id": 397888897
+   }
+  },
+  {
+   "id": "launch-site-story-3",
+   "network": "instagram",
+   "type": "story",
+   "title": "استوری معرفی سایت (3/4)",
+   "media": [
+    "content/launch/site-story/3.png"
+   ],
+   "publish_at": "2026-10-16T21:04:00",
+   "status": "scheduled",
+   "via": "connector",
+   "metricool": {
+    "id": 397888916
+   }
+  },
+  {
+   "id": "launch-site-story-4",
+   "network": "instagram",
+   "type": "story",
+   "title": "استوری معرفی سایت (4/4)",
+   "media": [
+    "content/launch/site-story/4.png"
+   ],
+   "publish_at": "2026-10-16T21:06:00",
+   "status": "scheduled",
+   "via": "connector",
+   "metricool": {
+    "id": 397888928
+   }
   }
  ]
 }
