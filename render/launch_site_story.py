@@ -26,8 +26,8 @@ FR[1] = f"""<div class='top' style='top:150px;font-size:76px'>سایت <span cla
 <div class='pill' style='top:1490px'>silenttalk.ir</div>
 <div class='sub' style='top:1640px;font-size:38px'>آزمون ۲ دقیقه‌ای · دورهٔ ۸ درسی · وبلاگ</div>"""
 FR[2] = f"""<div style='position:absolute;inset:0'><img src='{G5}/site-gifts.png' style='width:1080px;height:1920px;transform:translateY(110px)'></div>
-<div class='sub' style='top:1330px;font-size:46px;color:#fff'>ثبت‌نام در سایت، رایگان است</div>
-<div class='pill' style='top:1470px'>silenttalk.ir</div>"""
+<div class='sub' style='top:1170px;font-size:46px;color:#fff'>ثبت‌نام در سایت، رایگان است</div>
+<div class='pill' style='top:1310px'>silenttalk.ir</div>"""
 FR[3] = f"""<div class='top' style='top:240px'>۲۰ نفر اول که<br>در سایت <span class='y'>ثبت‌نام</span> کنند</div>
 <div style='position:absolute;left:110px;right:110px;top:640px;background:linear-gradient(135deg,#E8431F,#ff7a57);border-radius:72px;padding:90px 60px;text-align:center;box-shadow:0 30px 90px rgba(0,0,0,.5)'>
 <div style='font-size:190px;line-height:1'>📖</div><div style='font-size:78px;font-weight:900;margin-top:30px;line-height:1.4'>نسخهٔ چاپی کتاب<br>«درک زبان بدن»</div><div style='font-size:52px;margin-top:20px'>هدیه از طرف ما</div></div>

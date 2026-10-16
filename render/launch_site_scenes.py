@@ -34,7 +34,7 @@ SCENES["course"] = phone("course.png", 190)
 # designed cards -------------------------------------------------------
 SCENES["profile"] = """
 <style>
-.card{position:absolute;left:110px;top:200px;width:860px;background:#F6F1E7;border-radius:56px;padding:56px;color:#121B33;box-shadow:0 40px 120px rgba(0,0,0,.5)}
+.card{position:absolute;left:110px;top:110px;transform:scale(.84);transform-origin:top center;width:860px;background:#F6F1E7;border-radius:56px;padding:56px;color:#121B33;box-shadow:0 40px 120px rgba(0,0,0,.5)}
 .hi{display:flex;justify-content:space-between;align-items:center}
 .hi b{font-size:56px;font-weight:900}.av{width:120px;height:120px;border-radius:50%;background:#121B33;color:#fff;font-size:56px;display:flex;align-items:center;justify-content:center;font-weight:800}
 .badge{display:inline-block;background:#2E7D5B;color:#fff;border-radius:99px;font-size:30px;padding:8px 26px;margin-top:14px;font-weight:700}
@@ -53,7 +53,7 @@ SCENES["profile"] = """
 
 SCENES["gifts"] = """
 <style>
-.g{position:absolute;left:90px;right:90px;top:150px;display:flex;flex-direction:column;gap:34px}
+.g{position:absolute;left:90px;right:90px;top:110px;transform:scale(.88);transform-origin:top center;display:flex;flex-direction:column;gap:34px}
 .gi{background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.18);border-radius:48px;padding:46px;display:flex;gap:34px;align-items:center}
 .gi .em{font-size:110px;line-height:1;flex:none}
 .gi h3{font-size:54px;font-weight:900;line-height:1.35}.gi p{font-size:36px;color:#cfd6ea;margin-top:10px;line-height:1.6}
@@ -69,7 +69,7 @@ SCENES["gifts"] = """
 
 SCENES["blog"] = """
 <style>
-.b{position:absolute;left:90px;right:90px;top:150px;display:flex;flex-direction:column;gap:30px}
+.b{position:absolute;left:90px;right:90px;top:110px;transform:scale(.86);transform-origin:top center;display:flex;flex-direction:column;gap:30px}
 .hd{font-size:92px;font-weight:900;line-height:1.25;margin-bottom:8px}
 .bp{background:#F6F1E7;color:#121B33;border-radius:44px;padding:40px 46px;box-shadow:0 8px 0 #cfc6b2}
 .bp small{font-size:28px;color:#E8431F;font-weight:800}.bp h3{font-size:50px;font-weight:900;line-height:1.4;margin-top:6px}
@@ -79,7 +79,6 @@ SCENES["blog"] = """
  <div class='bp'><small>محل کار</small><h3>زبان بدن در جلسه‌های کاری: ۷ نشانه‌ای که باید دید</h3></div>
  <div class='bp'><small>چهره</small><h3>لبخند واقعی یا مؤدبانه؟ راهنمای دیدن فرق</h3></div>
  <div class='bp'><small>مصاحبه</small><h3>زبان بدن در مصاحبهٔ شغلی: از ورود تا دست دادن</h3></div>
- <div class='bp'><small>دست‌ها و بازوها</small><h3>دست‌به‌سینه یعنی چه؟ همیشه «بسته» نیست</h3></div>
 </div>"""
 
 SCENES["url"] = """
