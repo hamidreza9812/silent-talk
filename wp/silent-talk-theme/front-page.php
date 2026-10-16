@@ -22,6 +22,24 @@ $book = st_opt('st_book_url');
   </div>
 </section>
 
+<section class="gifts" id="gifts">
+  <div class="wrap">
+    <span class="kicker">هدیه‌های شروع</span>
+    <h2>سه <b>هدیه</b> منتظر توئه</h2>
+    <p class="sec-sub">ثبت‌نام در سایت رایگان است؛ و برای شروع، هدیه هم داریم.</p>
+    <?php $gi = st_gift_info(); ?>
+    <div class="grid g3">
+      <div class="card gift hot rv"><div class="ico">📖</div><h3>۲۰ نفر اول: کتاب چاپی</h3><p>به ۲۰ نفر اولی که در سایت ثبت‌نام (ساخت پروفایل یادگیری) کنند، نسخهٔ چاپی «درک زبان بدن» هدیه می‌دهیم. برای ارسال، با ایمیل یا شمارهٔ ثبت‌شده هماهنگ می‌کنیم.</p>
+        <?php if ($gi['live']) : ?><p class="slots"><b><?php echo esc_html(st_fa($gi['left'])); ?></b> از <?php echo esc_html(st_fa($gi['max'])); ?> نسخه باقی مانده</p><?php endif; ?>
+        <a class="btn sm" href="<?php echo esc_url(st_learn_url()); ?>#auth">ثبت‌نام رایگان</a></div>
+      <div class="card gift rv"><div class="ico">🎓</div><h3>خوانندگان طاقچه</h3><p>اگر کتاب را در طاقچه خوانده‌اید، همهٔ دوره‌ها برایتان تا آخر رایگان می‌شود و یک نسخهٔ چاپی هم هدیه می‌گیرید. بعد از ساخت پروفایل، از همان‌جا درخواست بدهید.</p>
+        <a class="btn sm" href="<?php echo esc_url(st_learn_url()); ?>">درخواست از پروفایل</a></div>
+      <div class="card gift rv"><div class="ico">🎁</div><h3>قرعه‌کشی برای فالوئرها</h3><p>فالوئرهای اینستاگرام و لینکدین به قید قرعه نسخهٔ چاپی رایگان می‌گیرند. برای شرکت، زیر پست قرعه‌کشی عدد <b>۷</b> را کامنت کنید. جزئیات و زمان قرعه‌کشی را در همان صفحه‌ها اعلام می‌کنیم.</p>
+        <p class="gift-links"><?php if (st_opt('st_instagram')) : ?><a class="btn sm ghost" href="<?php echo esc_url(st_opt('st_instagram')); ?>" rel="noopener" target="_blank">اینستاگرام</a><?php endif; ?> <?php if (st_opt('st_linkedin')) : ?><a class="btn sm ghost" href="<?php echo esc_url(st_opt('st_linkedin')); ?>" rel="noopener" target="_blank">لینکدین</a><?php endif; ?></p></div>
+    </div>
+  </div>
+</section>
+
 <section class="alt" id="where">
   <div class="wrap">
     <h2>این مهارت کجا <b>به کارت میاد؟</b></h2>
@@ -76,6 +94,28 @@ $book = st_opt('st_book_url');
     </div>
   </div>
 </section>
+
+<?php
+$latest = new WP_Query(['post_type' => 'post', 'posts_per_page' => 3, 'ignore_sticky_posts' => true]);
+if ($latest->have_posts()) : ?>
+<section class="alt" id="blog">
+  <div class="wrap">
+    <h2>تازه‌ترین <b>مقاله‌ها</b></h2>
+    <p class="sec-sub">مقاله‌های کوتاه دربارهٔ زبان بدن، بدون خرافه و با مثال‌های واقعی.</p>
+    <div class="grid g3 posts">
+    <?php while ($latest->have_posts()) : $latest->the_post(); $c = get_the_category(); ?>
+      <article class="card post-card rv">
+        <a class="pc-img" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true"><?php if (has_post_thumbnail()) { the_post_thumbnail('large', ['loading' => 'lazy', 'alt' => '']); } ?></a>
+        <div class="pc-body"><?php if ($c) : ?><span class="pc-cat"><?php echo esc_html($c[0]->name); ?></span><?php endif; ?>
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <div class="pc-meta"><span><?php echo esc_html(st_fa(st_reading_time())); ?> دقیقه مطالعه</span></div></div>
+      </article>
+    <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+    <p style="margin-top:26px"><a class="btn" href="<?php echo esc_url(st_blog_url()); ?>">همهٔ مقاله‌ها</a></p>
+  </div>
+</section>
+<?php endif; ?>
 
 <section class="dark" id="inside">
   <div class="wrap book">

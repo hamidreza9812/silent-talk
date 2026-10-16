@@ -15,6 +15,8 @@
       <a href="<?php echo esc_url(home_url('/#try')); ?>">سؤال نمونه</a>
       <a href="<?php echo esc_url(home_url('/#path')); ?>">مسیر یادگیری</a>
       <a href="<?php echo esc_url(st_learn_url()); ?>#course">دوره‌ها</a>
+      <a href="<?php echo esc_url(st_blog_url()); ?>">وبلاگ</a>
+      <a href="<?php echo esc_url(home_url('/#gifts')); ?>">🎁 هدیه‌ها</a>
       <a href="<?php echo esc_url(home_url('/#faq')); ?>">پرسش‌ها</a>
       <a class="keep" href="<?php echo esc_url(st_learn_url()); ?>"><?php echo is_user_logged_in() ? 'پروفایل من' : 'ورود / ثبت‌نام'; ?></a>
       <a class="btn sm" href="<?php echo esc_url(st_quiz_url()); ?>">آزمون سطح‌سنج</a>

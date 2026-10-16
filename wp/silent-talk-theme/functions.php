@@ -4,10 +4,11 @@
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('ST_VER', '1.3.0');
+define('ST_VER', '1.4.0');
 require_once get_template_directory() . '/inc/quiz.php';
 require_once get_template_directory() . '/inc/quiz-pro.php';
 require_once get_template_directory() . '/inc/learn.php';
+require_once get_template_directory() . '/inc/blog.php';
 
 /* ---------- setup ---------- */
 add_action('after_setup_theme', function () {
@@ -32,7 +33,7 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 add_action('wp_head', function () {
-    if (!is_front_page() && !get_query_var('st_quiz') && !get_query_var('st_learn')) { return; }
+    if (!is_front_page() || get_query_var('st_blog')) { if (!get_query_var('st_quiz') && !get_query_var('st_learn')) { return; } }
     $desc = get_query_var('st_learn') ? 'پروفایل یادگیری، سطح آزمون و دورهٔ کوتاه زبان بدن در ۸ درس.' : (get_query_var('st_quiz') ? 'هشت موقعیت واقعی، دو دقیقه: ببین سطح درک زبان بدنت چقدره.' : 'زبان بدن رو قدم‌به‌قدم و بدون خرافه یاد بگیر: آزمون دو دقیقه‌ای، درس‌های تصویری کوتاه و فهرست انتظار دوره.');
     echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
     echo '<meta property="og:type" content="website"><meta property="og:locale" content="fa_IR">' . "\n";
