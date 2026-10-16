@@ -736,6 +736,50 @@
    "metricool": {
     "id": 397888928
    }
+  },
+  {
+   "id": "launch-site-reel",
+   "network": "instagram",
+   "type": "reel",
+   "title": "ریل معرفی کامل سایت + هدیه‌ها",
+   "media": [
+    "content/launch/site-reel/reel-site.mp4"
+   ],
+   "caption_file": "content/launch/site-reel/caption.txt",
+   "publish_at": "2026-10-17T19:00:00",
+   "status": "scheduled",
+   "via": "connector",
+   "metricool": {
+    "id": 397893751
+   }
+  },
+  {
+   "id": "launch-li-site",
+   "network": "linkedin",
+   "type": "post",
+   "title": "لینکدین: معرفی سایت و هدیه‌ها",
+   "media": [
+    "content/launch/linkedin/site.png"
+   ],
+   "caption_file": "content/launch/linkedin/site.txt",
+   "publish_at": "2026-10-17T09:00:00",
+   "status": "approved",
+   "handled_by": "browser",
+   "via": "browser"
+  },
+  {
+   "id": "launch-li-quiz",
+   "network": "linkedin",
+   "type": "post",
+   "title": "لینکدین: چالش آزمون",
+   "media": [
+    "content/launch/linkedin/quiz.png"
+   ],
+   "caption_file": "content/launch/linkedin/quiz.txt",
+   "publish_at": "2026-10-18T09:00:00",
+   "status": "approved",
+   "handled_by": "browser",
+   "via": "browser"
   }
  ]
 }
